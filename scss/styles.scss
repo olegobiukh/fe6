@@ -54,6 +54,7 @@ html {
 }
 
 body {
+    position: relative;
     width: 100%;
     font-family: 'Arsenal', sans-serif;
     color: $main_color;
@@ -63,7 +64,6 @@ body {
 // navigation
 .navigation {
     @include flex_between;
-    position: relative;
     height: 120px;
     padding-left: 27px;
     padding-right: 27px;
@@ -87,7 +87,7 @@ body {
         padding-top: 6px;
         text-transform: uppercase;
         font-weight: bold;  
-        z-index: 8;
+        z-index: 9;
     }
 
   &__item {
@@ -876,32 +876,18 @@ body {
     opacity: 1;
     transform: rotate(-405deg);
   }
-
-   @keyframes menu-show {
-    from {
-      right: -300px;
-    }
-    to {
-      right: 0;
-    }
-  }
+//   .navigation {
+//     top: 0;
+//     right: 0;
+//   }
 
   .navigation__list {
-      position: fixed;
-      top: 0;
-      right: -300px;
-      justify-content: flex-start;
-      flex-direction: column;
-      width: 300px;
-      height: 100vh;
-      padding-top: 42px;
-      padding-left: 0;
-      background-color: rgba(51, 46, 46, 0.9);
-      animation: menu-hide linear 0.3s;
-      z-index: 9;
+      display: none;
+      
     }
 
   .navigation {
+
     &__item {
       width: 80%;
       border-bottom: none;
@@ -922,18 +908,16 @@ body {
       position: fixed;
       top: 0;
       right: 0;
-      animation: menu-show linear 0.5s;    
+      display: block;
+      width: 300px;
+      height: 100vh;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding-top: 42px;
+      padding-left: 0;
+      background-color: rgba(51, 46, 46, 0.9);
+    //   animation: SlideInLeft 2s;
   }
-
-  @keyframes menu-hide {
-    from {
-        right: 0;
-        }
-        to {
-        right: -300px;
-        }
-    }
-
 
     .about {
         &__wrapper {

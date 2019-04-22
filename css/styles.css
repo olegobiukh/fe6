@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
+  position: relative;
   width: 100%;
   font-family: 'Arsenal', sans-serif;
   color: #235466;
@@ -23,7 +24,6 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
-  position: relative;
   height: 120px;
   padding-left: 27px;
   padding-right: 27px;
@@ -43,7 +43,7 @@ body {
     padding-top: 6px;
     text-transform: uppercase;
     font-weight: bold;
-    z-index: 8; }
+    z-index: 9; }
   .navigation__item {
     border-bottom: 2px solid transparent;
     padding: 0 13px 13px;
@@ -628,30 +628,8 @@ body {
     opacity: 1;
     -webkit-transform: rotate(-405deg);
             transform: rotate(-405deg); }
-  @-webkit-keyframes menu-show {
-    from {
-      right: -300px; }
-    to {
-      right: 0; } }
-  @keyframes menu-show {
-    from {
-      right: -300px; }
-    to {
-      right: 0; } }
   .navigation__list {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 300px;
-    height: 100vh;
-    padding-top: 42px;
-    padding-left: 0;
-    background-color: rgba(51, 46, 46, 0.9);
-    -webkit-animation: menu-hide linear 0.3s;
-            animation: menu-hide linear 0.3s;
-    z-index: 9; }
+    display: none; }
   .navigation__item {
     width: 80%;
     border-bottom: none;
@@ -665,18 +643,14 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    -webkit-animation: menu-show linear 0.5s;
-            animation: menu-show linear 0.5s; }
-  @-webkit-keyframes menu-hide {
-    from {
-      right: 0; }
-    to {
-      right: -300px; } }
-  @keyframes menu-hide {
-    from {
-      right: 0; }
-    to {
-      right: -300px; } }
+    display: block;
+    width: 300px;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 42px;
+    padding-left: 0;
+    background-color: rgba(51, 46, 46, 0.9); }
   .about__wrapper {
     width: 90%; }
   .about__box-title {
