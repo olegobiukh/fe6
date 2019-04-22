@@ -11,6 +11,9 @@
 a:hover {
   text-decoration: underline; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   width: 100%;
   font-family: 'Arsenal', sans-serif;
@@ -149,6 +152,14 @@ body {
       color: #235466; }
       .header-social__link:hover {
         color: #cbdde2; }
+      .header-social__link_youtube {
+        background-image: url("../img/header/ico_youtube.png");
+        width: 20px;
+        height: 20px;
+        display: inherit;
+        background-size: contain; }
+        .header-social__link_youtube:hover {
+          background-image: url("../img/header/ico_youtube-hover.png"); }
   .header__btn {
     position: absolute;
     bottom: 50px;
@@ -205,7 +216,8 @@ body {
     color: #235466; }
 
 .references {
-  position: relative; }
+  position: relative;
+  padding-bottom: 200px; }
   .references__wrapper {
     width: 100%;
     overflow: hidden; }
@@ -243,12 +255,12 @@ body {
       margin-top: 10px; }
   .references__box {
     position: absolute;
+    top: 150px;
     width: 374px;
     background-color: #fff;
     padding-top: 40px;
     padding-bottom: 40px;
     right: 42%;
-    bottom: -100px;
     box-shadow: 0 16px 20px -7px #000;
     z-index: 2; }
     .references__box-wrapper {
@@ -303,7 +315,7 @@ body {
 .media {
   position: relative;
   justify-content: center;
-  padding-top: 450px;
+  padding-top: 250px;
   padding-bottom: 230px; }
   .media__bg {
     position: absolute; }

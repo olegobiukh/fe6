@@ -49,6 +49,10 @@ a:hover {
     text-decoration: underline;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     width: 100%;
     font-family: 'Arsenal', sans-serif;
@@ -230,6 +234,19 @@ body {
             &:hover {
                 color: #cbdde2;
             }
+
+            &_youtube {
+                background-image: url("../img/header/ico_youtube.png");
+                width: 20px;
+                height: 20px;
+                display: inherit;
+                background-size: contain;
+
+                &:hover {
+                    background-image: url("../img/header/ico_youtube-hover.png");
+                }
+            }
+            
         }
     }
 
@@ -304,6 +321,7 @@ body {
 
 .references {
     position: relative;
+    padding-bottom: 200px;
 
     &__wrapper {
         width: 100%;
@@ -356,12 +374,12 @@ body {
 
     &__box {
         position: absolute;
+        top: 150px;
         width: 374px;
         background-color: #fff; 
         padding-top: 40px;
         padding-bottom: 40px;  
         right: 42%;;
-        bottom: -100px;
         box-shadow: 0 16px 20px -7px #000;
         z-index: 2;
 
@@ -434,7 +452,7 @@ body {
 .media {
     position: relative;
     justify-content: center;
-    padding-top: 450px;
+    padding-top: 250px;
     padding-bottom: 230px;
 
     &__bg {
