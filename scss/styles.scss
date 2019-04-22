@@ -876,15 +876,26 @@ body {
     opacity: 1;
     transform: rotate(-405deg);
   }
-//   .navigation {
-//     top: 0;
-//     right: 0;
-//   }
 
+  
   .navigation__list {
       display: none;
-      
     }
+
+  input[type="checkbox"]:checked ~ .navigation__list {   
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 300px;
+      height: 100vh;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding-top: 42px;
+      padding-left: 0;
+      background-color: rgba(51, 46, 46, 0.9);
+  }
+
 
   .navigation {
 
@@ -902,21 +913,6 @@ body {
     &__link:hover {
       color: #e06969;
     }
-  }
-
-  input[type="checkbox"]:checked ~ .navigation__list {    
-      position: fixed;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 300px;
-      height: 100vh;
-      justify-content: flex-start;
-      flex-direction: column;
-      padding-top: 42px;
-      padding-left: 0;
-      background-color: rgba(51, 46, 46, 0.9);
-    //   animation: SlideInLeft 2s;
   }
 
     .about {

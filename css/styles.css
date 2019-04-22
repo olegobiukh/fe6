@@ -630,15 +630,6 @@ body {
             transform: rotate(-405deg); }
   .navigation__list {
     display: none; }
-  .navigation__item {
-    width: 80%;
-    border-bottom: none;
-    text-align: left; }
-  .navigation__link {
-    font-weight: normal;
-    color: #fff; }
-  .navigation__link:hover {
-    color: #e06969; }
   input[type="checkbox"]:checked ~ .navigation__list {
     position: fixed;
     top: 0;
@@ -651,6 +642,15 @@ body {
     padding-top: 42px;
     padding-left: 0;
     background-color: rgba(51, 46, 46, 0.9); }
+  .navigation__item {
+    width: 80%;
+    border-bottom: none;
+    text-align: left; }
+  .navigation__link {
+    font-weight: normal;
+    color: #fff; }
+  .navigation__link:hover {
+    color: #e06969; }
   .about__wrapper {
     width: 90%; }
   .about__box-title {
